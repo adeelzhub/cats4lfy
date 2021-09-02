@@ -8,7 +8,8 @@ const Checkout = (basketItem, product__price) => {
 
     }
 
-    return(
+    return
+    (
         <div>
             <Link to="/"><button>Back To Home Page</button></Link>
             <h2 className='checkout'>checkout</h2>
