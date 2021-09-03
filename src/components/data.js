@@ -18,24 +18,9 @@ class Data {
     this.id = id;
     this.name = name;
     this.price = price;
-    // this.url = "";
+    this.quatity = 0;
   }
 }
-
-// const catUrl = async () => {
-//   try {
-//     const response = await fetch("https://api.thecatapi.com/v1/images/search");
-//     if (response.status !== 200) {
-//       throw new Error(`${response.status} Error`);
-//     }
-//     const data = await response.json();
-//     const [cat] = data;
-//     const url = cat.url;
-//     return url;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
 
 const catsData = cats.map((el, i) => new Data(i, el[0], el[1]));
 
