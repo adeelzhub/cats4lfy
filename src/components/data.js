@@ -29,8 +29,8 @@ const catUrl = async () => {
       throw new Error(`${response.status} Error`);
     }
     const data = await response.json();
-    const [cat] = await data;
-    const url = await cat.url;
+    const [cat] = data;
+    const url = cat.url;
     return url;
   } catch (error) {
     console.log(error);

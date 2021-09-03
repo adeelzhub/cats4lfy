@@ -2,11 +2,11 @@ import React from "react";
 import catsData from "./data";
 
 const Home = () => {
-  console.log(catsData);
-
+  console.log(catsData[0].url);
   return (
     <div className="home">
       <div className="features">features</div>
+      <img src={catsData[0].url}></img>
       <div className="products">
         <div className="product">
           <div className="product__image">img</div>
