@@ -14,26 +14,33 @@
 .product {
   background-color: azure;
   width: 300px;
+
   display: flex;
   flex-direction: column;
-}
-.product__image {
-  background-color: brown;
-  width: 300px;
-  height: 300px;
-}
-.product__box {
-  display: flex;
-  justify-content: space-between;
-}
-.product__details {
-  padding: 20px;
-}
-.product__name {
-  font-size: 30px;
-}
-.product__price {
-  font-size: 25px;
-}
 
-/*# sourceMappingURL=App.css.map */
+  &__image {
+    background-color: brown;
+    width: 300px;
+    height: 300px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__details {
+    padding: 20px;
+  }
+
+  &__name {
+    font-size: 30px;
+  }
+
+  &__price {
+    font-size: 25px;
+  }
+
+  &__btn {
+  }
+}
