@@ -1,3 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  /* color: #333; */
+}
+body {
+  background-color: rgba(245, 247, 246, 0.795);
+  min-height: 100vh;
+}
+.navbar {
+  background-color: rgba(212, 208, 199, 0.7);
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar * {
+  padding: 20px;
+}
+.navbar a {
+  text-decoration: none;
+}
+.shoppingCartheading {
+  text-align: center;
+  padding: 30px;
+}
+.cartDescriptionBar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 30px auto 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  font-weight: bold;
+}
+.cartProduct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 5px auto 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+.cartProduct img {
+  max-width: 7%;
+}
+.cartProduct input {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+.cartProduct p {
+  font-weight: 500;
+}
+.subTotal {
+  display: flex;
+  max-width: 800px;
+  margin: 30px auto 30px;
+  justify-content: flex-end;
+  font-weight: 500;
+}
+.subTotal p {
+  padding-left: 40px;
+}
+.cartButtons {
+  display: flex;
+  max-width: 800px;
+  margin: 30px auto 30px;
+  justify-content: flex-end;
+}
+.cartButtons button {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+  cursor: pointer;
+  /* background-color: #4CAF50; */
+}
+.cartButtons button:hover {
+  background-color: rgba(212, 208, 199, 0.6);
+}
+
+/* Footer */
+.main-footer {
+  /* max-width: 800px; */
+}
+
 .home {
   display: flex;
   justify-content: center;
@@ -42,5 +134,37 @@
   }
 
   &__btn {
+  }
+}
+
+// Footer
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0 20px;
+    width: 70%;
+    min-width: 600px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.copyright {
+  //   border-top: 2px solid;
+  padding: 20px 0;
+
+  & * {
+    border-top: 2px solid;
   }
 }

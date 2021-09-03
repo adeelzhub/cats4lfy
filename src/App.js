@@ -1,6 +1,6 @@
 import "./App.css";
 import Checkout from "./components/Checkout";
-import Cart from "./components/Cart";
+// import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
@@ -18,9 +18,6 @@ function App() {
         <Nav />
         <div className="content">
           <Switch>
-            <Route path="/cart">
-              <Cart />
-            </Route>
             <Route path="/checkout">
               <Checkout />
             </Route>

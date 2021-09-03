@@ -62,7 +62,7 @@ const Product = (props) => {
       <div className="product__box">
         <div className="product__details">
           <div className="product__name">{props.name}</div>
-          <div className="product__price">£: {props.price}</div>
+          <div className="product__price">£{props.price}</div>
         </div>
         <button className="product__btn" onClick={props.btn}>
           +
