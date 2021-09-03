@@ -1,48 +1,69 @@
-import {Link} from 'react-router-dom'
-import { useState } from "react"
+import React from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useCart } from "react-use-cart";
+import { myCart } from "./Home";
 
-const Checkout = (basketItem, product__price) => {
-   
-    const [qty, setQty] = useState(null)
-    const handlerBasketTotal = ()=>{
+const Checkout = () => {
+  const purchase = [...myCart];
 
-    }
+  let subTotal = 0;
 
-    return(
-        <div>
-            <Link to="/"><button>Back To Home Page</button></Link>
-            <h2 className='checkout'>checkout</h2>
-            <div>{basketItem.length === 0 && <div>Basket is empty</div>} </div>
-            <Items item={item} product__price={product__price} qty={qty}> subTotal={subTotal}</Items>
-            <div className="basketTotal">
-                <p>Basket Total</p>
-                <p>{}</p>  
-            </div>   
-           
-        </div>
-    )
+  const totalPrice = (index) => {
+    let tPrice = purchase[index].price * purchase[index].quantity;
+    subTotal += tPrice;
+    return `£ ${tPrice}`;
+  };
 
-}
+  return (
+    <>
+      <h2 className="shoppingCartheading">Shopping Cart</h2>
+      <div className="cartDescriptionBar">
+        <p>Cat</p>
+        <p>Cost of Adoption</p>
+        <p>Quantity</p>
+        <p>Edit Quantity</p>
+        <p>Total</p>
+      </div>
+      {purchase.map((purchase, index) => (
+        <Products
+          key={purchase.id}
+          link={purchase.url}
+          price={purchase.price}
+          qty={purchase.quantity}
+          total={totalPrice(index)}
+        />
+      ))}
 
+      <div className="subTotal">
+        <p>Subtotal </p>
+        <p>£ {subTotal}</p>
+      </div>
+      <div className="cartButtons">
+        <Link to="/">
+          <button className="checkOut">Continue Shopping</button>
+        </Link>
+        <Link to="">
+          <button className="checkOut">Proceed to checkout</button>
+        </Link>
+      </div>
+    </>
+  );
+};
 
+const Products = ({ key, link, price, qty, total, handlerQty }) => {
+  return (
+    <div className="cartProduct">
+      <img src={link} />
+      <p>£ {price}</p>
+      <p>{qty}</p>
+      <div>
+        <button>-</button>
+        <button>+</button>
+      </div>
+      <p>{total}</p>
+    </div>
+  );
+};
 
-
-const Items = ({item, product__price, qty}) =>{
-    const handlerQty = (q)=>{
-        setQty(q)
-
-    } 
-    return(
-        <div className="checkOut">
-                
-                <p>{item}</p>
-                <p>{product__price}</p>
-                <input onChange={(e)=>handlerQty(e.target.value)}></input>
-                <button>Remove Product</button>
-                <p>{totalPrice}</p>
-        </div>
-    )
-}
-
-
-export default Checkout
+export default Checkout;

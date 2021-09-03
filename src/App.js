@@ -1,42 +1,35 @@
-import './App.css';
-import Checkout from './components/Checkout'
-import Cart from './components/Cart'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import Nav from './components/Nav'
+import "./App.css";
+import Checkout from "./components/Checkout";
+// import Cart from "./components/Cart";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Nav from "./components/Nav";
 
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import React from 'react'
-import{ BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+//testing
 
 function App() {
-  const [basketItem, setBasketItem] = useState([])
+  // const [basketItem, setBasketItem] = useState([]);
   return (
     <Router>
-      <div className='app'>
+      <div className="app">
         <Nav />
-        <div className='content'>
+        <div className="content">
           <Switch>
-            <Route path='/cart'>
-              <Cart />
-            </Route>
-            <Route path='/checkout'>
+            <Route path="/checkout">
               <Checkout />
             </Route>
-            <Route path='/'>
+            <Route path="/">
               <Home />
-            </Route>              
+            </Route>
           </Switch>
         </div>
         <Footer />
       </div>
     </Router>
-    
-
   );
 }
-
-
-
 
 export default App;
