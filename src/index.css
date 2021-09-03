@@ -125,7 +125,6 @@ body {
   flex-direction: column;
 }
 .product__image {
-  background-color: brown;
   width: 300px;
   height: 300px;
 }
