@@ -1,17 +1,14 @@
 import React from "react";
 
 const Nav = () => {
+  return (
+    <div className="nav">
+      <div className="logo">Logo</div>
+      <div className="cart-link">Cart</div>
+    </div>
+  );
+};
 
-    return (
-        <div ClassName='nav'>
-            <div ClassName='logo'>Logo</div>
-            <div ClassName='cart-link'>Cart</div>
-        </div>
-    )
-}
+const navbar = () => {};
 
-const navbar = () => {
-
-}
-
-export default Nav
+export default Nav;

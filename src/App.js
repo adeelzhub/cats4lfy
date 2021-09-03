@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //testing
 
 function App() {
-  const [basketItem, setBasketItem] = useState([]);
+  // const [basketItem, setBasketItem] = useState([]);
   return (
     <Router>
       <div className="app">
