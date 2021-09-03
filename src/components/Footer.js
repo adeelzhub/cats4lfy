@@ -1,11 +1,17 @@
+import React from 'react'
+
 const Footer = () => {
     return (
-        <div className='footer'>
-            <div className='socials'>socials</div>
-            <div className='copyrights'>Copyrights</div>
+        <div>
+             <h1 className="text-center mt-3">Footer</h1>
+            
+            <section className="py-4 container">
+                <div className="row justify-content-center">
+
+                </div>
+            </section> 
         </div>
     )
-
 }
 
 export default Footer

@@ -1,23 +1,35 @@
+import React from 'react';
+import Cart from './Cart';
+import product from './Product';
+
+
 const Home = () => {
+    
+    return (
+        <>
+            <h1 className="text-center mt-3">All items</h1>
+            
+            <section className="py-4 container">
+                <div className="row justify-content-center">
+                    {product.productData.map((item, index) => {
+                        return(
+                            <Cart 
+                            img={item.img} 
+                            title ={item.title}
+                            desc={item.desc} 
+                            price={item.price} 
+                            item={item} 
+                            key={index}
+                            />
+                        )
 
-    return(
-        <div className='home'>
-            <div className='features'>features</div>
-            <div className='products'>
-                <div className='product'>
-                    <div className='product__image'>img</div>
-                    <div className='product__box'>
-                      <div className='product__details'>
-                        <div className='product__name'>name</div>
-                        <div className='product__price'>$</div>
-                      </div>
-                      <div className='product__btn'>+</div>
-                    </div>
+                    })}
+                    
+
                 </div>
-            </div>          
-        </div>
+            </section> 
+        </>
     )
-
 }
 
 export default Home

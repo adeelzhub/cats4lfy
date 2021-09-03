@@ -1,17 +1,23 @@
-const Cart = () => {
+import React from 'react'
+import { useCart } from 'react-use-cart'
 
-    return(
-        <div className='cart'>
-            <div className='items'>Items</div>
-            <div className='summary'>
-                <div className='summary__box'>
-                
+const Cart = (props) => {
+    const {addItem}=useCart();
+    return (
+            <div className="col-11 col-md-6 col-lg-3 mx-0 mb-4">
+                <div class="card p-0 overflow-hidden h-100 shadow">
+                <img src={props.img} class="card-img-top img-fluid"/>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{props.title}</h5>
+                        <h5 class="card-text">£{props.price}</h5>
+                        <p class="card-text">{props.desc}</p>
+                        <button class="btn btn-sucess"
+                         onClick={()=>addItem(props.item)}
+                        >Add to cart</button>
+                    </div>
                 </div>
-                <button className='checkout'>Checkout</button>
             </div>
-        </div>
     )
-
 }
 
 export default Cart

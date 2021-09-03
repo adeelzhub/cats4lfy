@@ -1,17 +1,23 @@
-import React from "react";
+import React from 'react'
+import PropTypes from 'prop-types'
 
-const Nav = () => {
-
+const nav = () => {
     return (
-        <div ClassName='nav'>
-            <div ClassName='logo'>Logo</div>
-            <div ClassName='cart-link'>Cart</div>
+        <div>
+             <h1 className="text-center mt-3">NavBar</h1>
+            
+            <section className="py-4 container">
+                <div className="row justify-content-center">
+
+                </div>
+            </section> 
+            
         </div>
     )
 }
 
-const navbar = () => {
+nav.propTypes = {
 
 }
 
-export default Nav
+export default nav

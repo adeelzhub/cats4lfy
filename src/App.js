@@ -1,20 +1,27 @@
-import './App.css';
-import Checkout from './components/Checkout'
-import Cart from './components/Cart'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import Nav from './components/Nav'
-
-
-import React from 'react'
+import React from 'react';
 import{ BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import Home from "./Components/Home"
+import Checkout from './Components/Checkout'
+import Cart from './Components/Cart'
+import Footer from './Components/Footer'
+import Nav from './Components/Nav'
 
-function App() {
-  const [basketItem, setBasketItem] = useState([])
+
+import { CartProvider } from 'react-use-cart';
+import './App.css';
+
+const App=()=> {
   return (
-    <Router>
+    <>
+    <CartProvider>
+        <Home/>
+        <Checkout/>
+    </CartProvider>
+    {/* <Router>
       <div className='app'>
         <Nav />
+        <Checkout/>
         <div className='content'>
           <Switch>
             <Route path='/cart'>
@@ -30,13 +37,18 @@ function App() {
         </div>
         <Footer />
       </div>
-    </Router>
-    
-
+    </Router> */}
+   
+   </>
   );
 }
 
-
-
-
 export default App;
+
+
+   
+    
+
+
+
+
