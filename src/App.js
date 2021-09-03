@@ -1,26 +1,26 @@
 import './App.css';
 import Checkout from './components/Checkout'
-import Cart from './components/Cart'
+// import Cart from './components/Cart'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import Nav from './components/Nav'
+
 
 
 import React from 'react'
 import{ BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 function App() {
-  const [basketItem, setBasketItem] = useState([])
   return (
-    <Router>
-      <div className='app'>
-        <Nav />
-        <div className='content'>
-          <Switch>
-            <Route path='/cart'>
+      <Router>
+        <div className="app">
+          <Nav className="navbar"/>
+          <div className="content">
+            <Switch>
+            {/* <Route path='/cart'>
               <Cart />
-            </Route>
-            <Route path='/checkout'>
+            </Route> */}
+            <Route path='/Checkout'>
               <Checkout />
             </Route>
             <Route path='/'>
@@ -28,12 +28,13 @@ function App() {
             </Route>              
           </Switch>
         </div>
-        <Footer />
+        <Footer div className="page-container" />
       </div>
     </Router>
     
 
   );
+
 }
 
 
