@@ -4,7 +4,7 @@ import Checkout from './components/Checkout'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import Nav from './components/Nav'
-import { myCart } from './components/Home'
+
 
 
 import React from 'react'
