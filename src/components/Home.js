@@ -2,13 +2,12 @@ import React from "react";
 import catsData from "./data";
 import { useState, useEffect } from "react";
 
-let myCart;
+let myCart = catsData;
 
 const Home = () => {
   const addProduct = (obj) => {
     obj.quantity += 1;
     myCart = catsData.filter((el) => el.quatity > 0);
-    console.log(myCart);
   };
 
   return (
@@ -74,4 +73,4 @@ const Product = (props) => {
 
 export default Home;
 
-export { myCart };
+export { myCart, catsData };
