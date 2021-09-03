@@ -1,13 +1,86 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Quicksand";
+  /* color: #333; */
 }
+body{
+  background-color: rgba(245, 247, 246, 0.795);
+}
+.navbar{
+  background-color: rgba(212, 208, 199,.7);
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar *{
+  padding: 20px;
+}
+.navbar a{
+  text-decoration: none;
+}
+.shoppingCartheading{
+  text-align: center;
+  padding: 30px;
+}
+.cartDescriptionBar{
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 30px auto 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(171, 181, 189);
+  font-weight: bold;
+}
+.cartProduct{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  max-width: 800px;
+  margin: 30px auto 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(171, 181, 189);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+.cartProduct img{
+  max-width: 7%;
+}
+.cartProduct input{
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+.cartProduct p{
+  font-weight: 500;
+}
+.subTotal{
+  display: flex;
+  max-width: 800px;
+  margin: 30px auto 30px;
+  justify-content: flex-end;
+  font-weight: 500;
+}
+.subTotal p{
+  padding-left: 40px;
+}
+.cartButtons{
+  display: flex;
+  max-width: 800px;
+  margin: 30px auto 30px;
+  justify-content: flex-end;
+}
+.cartButtons button{
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+  cursor: pointer;
+  /* background-color: #4CAF50; */
+}
+.cartButtons button:hover{
+  background-color: rgba(212, 208, 199,.6);;
 }
